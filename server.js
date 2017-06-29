@@ -16,7 +16,7 @@ const port = process.env.PORT || 8080;
 const router = express.Router();
 
 router.get('/', function(req, res) {
-  console.log(res);
+  res.send('(ಠ_ಠ)')
 });
 
 router.post('/', function(req, res) {
