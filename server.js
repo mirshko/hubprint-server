@@ -15,6 +15,10 @@ const port = process.env.PORT || 8080;
 // ================================================
 const router = express.Router();
 
+router.get('/', function(req, res) {
+  console.log(res);
+});
+
 router.post('/', function(req, res) {
   const hapikey = req.body.hapikey;
   const subcategory = req.body.subcategory;
@@ -32,7 +36,7 @@ router.post('/', function(req, res) {
 
 // REGISTER ROUTES
 // ================================================
-app.use('/printer', router);
+app.use('/', router);
 
 // START SERVER
 // ================================================
